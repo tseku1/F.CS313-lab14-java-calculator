@@ -27,8 +27,11 @@ jobs:
       - name: Run Checkstyle
         run: mvn -B checkstyle:check
 
-      - name: Run Tests + Coverage Check
-        run: mvn -B test jacoco:check
+      - name: Run Unit Tests
+        run: mvn -B test
 
       - name: Generate Coverage Report
         run: mvn -B jacoco:report
+
+      - name: Check Coverage Rules
+        run: mvn -B jacoco:check
