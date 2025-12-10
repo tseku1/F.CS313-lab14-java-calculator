@@ -24,5 +24,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Run Full Maven Verify (includes test, checkstyle, jacoco)
+      - name: Run Full Maven Verify (test + checkstyle + jacoco)
         run: mvn -B verify
